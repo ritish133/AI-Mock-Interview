@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <h2>Subscribe to Tubeguruji</h2>
-    <Button>Subscribe</Button>
+      <Button>Subscribe</Button>
     </div>
   );
 }
