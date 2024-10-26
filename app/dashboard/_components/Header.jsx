@@ -15,11 +15,19 @@ function Header() {
     <div className='flex p-4 items-center justify-between bg-secondary shadow-md'>
       <Image src={'/logo.png'} width={160} height={100} alt='logo'/>
       <ul className='hidden md:flex gap-6'>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard'&&'text-primary font-bold'}`}>Dashboard</li>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/questions'&&'text-primary font-bold'}`}>Questions</li>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/upgrade'&&'text-primary font-bold'}`}>Upgrades</li>
+      <a href='/dashboard'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Dashboard</li>
+        </a>
+        <a href='/dashboard/questions'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Questions</li>
+        </a>
+        <a href='/'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>How It Works?</li>
+        </a>
       </ul>
-      <UserButton/>
+      <div className="w-12 h-12 flex items-center justify-center"> {/* Adjust the size here */}
+                <UserButton />
+            </div>
     </div>
   )
 }
