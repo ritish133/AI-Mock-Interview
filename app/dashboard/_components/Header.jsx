@@ -13,15 +13,18 @@ function Header() {
 
   return (
     <div className='flex p-4 items-center justify-between bg-secondary shadow-md'>
+      <a href='/'>
       <Image src={'/logo.png'} width={160} height={100} alt='logo'/>
+      </a>
+      
       <ul className='hidden md:flex gap-6'>
+        <a href='/'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Home</li>
+        </a>
       <a href='/dashboard'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Dashboard</li>
         </a>
-        <a href='/dashboard/questions'>
-        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Questions</li>
-        </a>
-        <a href='/'>
+        <a href='/#working'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>How It Works?</li>
         </a>
       </ul>

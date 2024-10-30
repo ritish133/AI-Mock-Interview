@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-8 z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 bg-transparent">
+      <section className="py-8 z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 bg-transparent" id="working">
         <h2 className="font-bold text-3xl">How it Works?</h2>
         <h2 className="text-md text-gray-700">
           Give mock interview in just 3 simpler easy steps

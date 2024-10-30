@@ -98,7 +98,6 @@ function RecordAnswerSection({ mockInterviewQuestion, activeQuestionIndex, inter
             correctAns:mockInterviewQuestion[activeQuestionIndex]?.answer,
             userAns:userAnswer,
             feedback:JsonFeedbackResp?.feedback,
-            // feedback: JSON.stringify(JsonFeedbackResp), // Convert to string if needed
             rating:JsonFeedbackResp?.rating,
             userEmail: user?.primaryEmailAddress?.emailAddress,
             createdAt: moment().format('DD-MM-yyyy')
@@ -119,7 +118,7 @@ function RecordAnswerSection({ mockInterviewQuestion, activeQuestionIndex, inter
       <div className="flex flex-col mt-20 justify-center items-center bg-black rounded-lg p-5">
         <Image
           src={"/webcam.png"}
-          width={200}
+          width={400}
           height={200}
           className="absolute"
         />
