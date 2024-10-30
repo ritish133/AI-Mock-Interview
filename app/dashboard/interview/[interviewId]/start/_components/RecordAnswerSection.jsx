@@ -45,7 +45,7 @@ function RecordAnswerSection({ mockInterviewQuestion, activeQuestionIndex, inter
     if (isRecording) {
       stopSpeechToText();
 
-      console.log(userAnswer);
+      // // console.log(userAnswer);
 
     } else {
       startSpeechToText();
@@ -53,7 +53,7 @@ function RecordAnswerSection({ mockInterviewQuestion, activeQuestionIndex, inter
   }
 
   const UpdateUserAnswer=async()=>{
-    console.log(userAnswer);
+    // // console.log(userAnswer);
 
     setLoading(true);
 
@@ -74,16 +74,16 @@ function RecordAnswerSection({ mockInterviewQuestion, activeQuestionIndex, inter
         .replace("```", "")
         .trim();
 
-      console.log(mockJsonResp);
+      // // console.log(mockJsonResp);
 
       mockJsonResp = mockJsonResp.replace(/,\s*}/g, "}").replace(/,\s*]/g, "]");
 
-      console.log("Raw JSON Response:", mockJsonResp); // Log the raw response
+      // // console.log("Raw JSON Response:", mockJsonResp); // Log the raw response
 
       let JsonFeedbackResp;
       try {
         JsonFeedbackResp = JSON.parse(mockJsonResp);
-        console.log("Parsed JSON:", JsonFeedbackResp);
+        // console.log("Parsed JSON:", JsonFeedbackResp);
       } catch (error) {
         console.error("Failed to parse JSON:", error);
         console.error("Response was:", mockJsonResp); // Log the response for further inspection

@@ -33,7 +33,7 @@ function AddNewInterview() {
     const onSubmit = async (e) => {
       setLoading(true);
       e.preventDefault();
-      console.log(jobPosition, jobDesc, jobExperience);
+      // console.log(jobPosition, jobDesc, jobExperience);
     
       const InputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDesc}. Years of Experience: ${jobExperience}, Depends on Job Position, Job Description & Years of Experience give us ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} interview question along with Answer in JSON format, Give us question and answer field on JSON`;
     
@@ -43,12 +43,12 @@ function AddNewInterview() {
       // Sanitize the response
       MockJsonResp = MockJsonResp.replace(/,\s*}/g, '}').replace(/,\s*]/g, ']');
       
-      console.log("Raw JSON Response:", MockJsonResp); // Log the raw response
+      // console.log("Raw JSON Response:", MockJsonResp); // Log the raw response
   
       let parsedJson;
       try {
           parsedJson = JSON.parse(MockJsonResp);
-          console.log("Parsed JSON:", parsedJson);
+          // console.log("Parsed JSON:", parsedJson);
       } catch (error) {
           console.error("Failed to parse JSON:", error);
           console.error("Response was:", MockJsonResp); // Log the response for further inspection
@@ -69,13 +69,13 @@ function AddNewInterview() {
           })
           .returning({ mockId: MockInterview.mockId });
     
-        console.log("Inserted ID:", resp);
+        // console.log("Inserted ID:", resp);
         if(resp){
           setOpenDialog(false);
           router.push('/dashboard/interview/'+resp[0]?.mockId);
         }
       } else {
-        console.log("ERROR: No valid JSON response");
+        // console.log("ERROR: No valid JSON response");
       }
       setLoading(false);
     }

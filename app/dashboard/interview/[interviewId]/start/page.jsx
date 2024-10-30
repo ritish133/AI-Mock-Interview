@@ -21,14 +21,14 @@ function StartInterview({ params }) {
 
   const GetInterviewDetails = async () => {
     try {
-      console.log("Fetching interview details for ID:", params.interviewId);
+      // console.log("Fetching interview details for ID:", params.interviewId);
       
       const result = await db
         .select()
         .from(MockInterview)
         .where(eq(MockInterview.mockId, params.interviewId));
       
-      console.log("Query Result:", result);
+      // console.log("Query Result:", result);
 
       // Check if the result is empty
       if (result.length === 0) {
@@ -39,7 +39,7 @@ function StartInterview({ params }) {
       let jsonMockResp;
       try {
         jsonMockResp = JSON.parse(result[0].jsonMockResp);
-        console.log("Parsed JSON Response:", jsonMockResp);
+        // console.log("Parsed JSON Response:", jsonMockResp);
       } catch (error) {
         console.error("Failed to parse JSON:", error);
         return; // Exit if parsing fails
@@ -47,7 +47,7 @@ function StartInterview({ params }) {
 
       setMockInterviewQuestion(jsonMockResp);
       setInterviewData(result[0]);
-      console.log("Interview Data:", result[0]);
+      // console.log("Interview Data:", result[0]);
     } catch (error) {
       console.error("Error fetching interview details:", error);
     }
