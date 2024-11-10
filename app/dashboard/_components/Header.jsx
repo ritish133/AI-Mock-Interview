@@ -27,6 +27,9 @@ function Header() {
         <a href='/#working'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>How It Works?</li>
         </a>
+          <a href='https://ai-studio-project.vercel.app/'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>AI Studio</li>
+        </a>
       </ul>
       <div className="w-12 h-12 flex items-center justify-center"> {/* Adjust the size here */}
                 <UserButton />
