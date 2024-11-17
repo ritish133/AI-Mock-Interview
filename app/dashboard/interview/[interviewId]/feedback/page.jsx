@@ -27,20 +27,16 @@ function Feedback({ params }) {
       .from(UserAnswer)
       .where(eq(UserAnswer.mockIdRef, params.interviewId))
       .orderBy(UserAnswer.id);
-
+  
     // console.log(result);
     setFeedbackList(result);
-    
+  
     // Calculate overall rating
-    if (result.length > 0) {
-      const totalRating = result.reduce((sum, item) => sum + (item.rating / 5), 0); // Normalize each rating
-      const averageRating = totalRating / result.length; // Calculate average of normalized ratings
-      const scaledRating = averageRating * 10; // Scale to 0-10 range
-      setOverallRating(scaledRating.toFixed(0)); // Store and format the overall rating
-    } else {
-      setOverallRating(0); // Reset overall rating if no feedback
-    }
+    const totalRating = result.reduce((acc, item) => acc + parseInt(item.rating), 0); // Sum the ratings
+    const calculatedRating = Math.round(totalRating / 5); // Divide by 5 and round to nearest integer
+    setOverallRating(calculatedRating); // Set overall rating state
   };
+  
 
   return (
     <div className="p-10">
