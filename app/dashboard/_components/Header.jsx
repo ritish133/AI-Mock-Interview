@@ -27,6 +27,9 @@ function Header() {
         <a href='/#working'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>How It Works?</li>
         </a>
+          <a href='https://ai-studio-project.vercel.app/supportus'>
+        <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>Support Us</li>
+        </a>
           <a href='https://ai-studio-project.vercel.app/'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer`}>AI Studio</li>
         </a>
