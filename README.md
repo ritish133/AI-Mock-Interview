@@ -11,6 +11,7 @@ MockMate AI is an advanced AI-powered platform for conducting mock interviews an
 - **Authentication:** Secure user authentication and account management with Clerk.
 - **Payments:** Stripe integration for handling payments and unlocking premium features.
 - **Modern UI:** Responsive and beautiful user interface built with Next.js and Tailwind CSS.
+- **Database:** Built on Neon with Drizzle ORM for scalable, reliable data storage.
 
 ## Tech Stack
 
@@ -19,6 +20,8 @@ MockMate AI is an advanced AI-powered platform for conducting mock interviews an
 - **Authentication:** Clerk
 - **Payments:** Stripe
 - **AI Integration:** Gemini AI
+- **Database:** Neon
+- **ORM:** Drizzle ORM
 - **Media Input:** Camera and microphone support
 
 ## Getting Started
@@ -41,7 +44,7 @@ yarn install
 ### Configuration
 
 1. Create a `.env.local` file in the root directory.
-2. Add your Clerk, Stripe, and Gemini AI API keys, and any other environment variables required for the platform.
+2. Add your Clerk, Stripe, Gemini AI, Neon database, and any other required environment variables.
 3. Update any relevant URLs or configuration in the project settings.
 
 ### Running the App
@@ -57,6 +60,9 @@ Visit `http://localhost:3000` in your browser.
 
 Pull requests are welcome! For major changes, please open an issue to discuss what you would like to change.
 
+## License
+
+[MIT](LICENSE)
 
 ---
 
